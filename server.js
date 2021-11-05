@@ -11,11 +11,8 @@ const image = require('./controlers/image')
 const db = require('knex')({
   client: 'pg',
   connection: {
-    host : 'postgresql-objective-00001',
-    //port : 3306,
-    user : 'postgres',
-    password : '',
-    database : 'smart-brain'
+    host : process.env.DATABASE_URL,
+    ssl: true
   }
 });
 
