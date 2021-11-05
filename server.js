@@ -33,8 +33,8 @@ app.get('/profile/:id', (reg, resp)=>{ profile.handleProfileGet(req, res, db)})
 app.put('/image', (req, res)=>{ image.handleImage(req, res, db)})
 app.post('/imageurl', (req, res)=>{ image.handleApiCall(req, res)})
 
- app.listen (3000, ()=>{
- 	console.log('App is runnning on porst 3000')
+ app.listen (process.env.PORT || 3000, ()=>{
+ 	console.log(`App is runnning on porst ${proces.env.PORT}`)
  })
 
 
